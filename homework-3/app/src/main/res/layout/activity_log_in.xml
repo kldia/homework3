@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/backgrouund"
+    tools:context=".LogInActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/EmailField"
+        android:hint="@string/email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:singleLine="true"
+        android:background="@color/red"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordField"
+        android:layout_marginBottom="20dp"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/red"
+        android:inputType="textPassword"
+        android:id="@+id/PasswordField"
+        android:hint="@string/password"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/LogInButtonLogIn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="@string/log_in"
+        android:background="@color/red"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/ProgressBarLogIn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_margin="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/EmailField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
